@@ -7,7 +7,7 @@ class Program
     {
         // Set up the DI container using the extension method
         var serviceProvider = new ServiceCollection()
-            .AddAwesomeGICBankServices() // Call the extension method to register all dependencies
+            .AddBankEaseServices() // Call the extension method to register all dependencies
             .BuildServiceProvider();
 
         // Resolve the BankingApplicationService from the DI container

@@ -9,7 +9,7 @@ namespace BankEase.Application
 {
     public static class ServiceCollectionExtensions
     {
-        public static IServiceCollection AddAwesomeGICBankServices(this IServiceCollection services)
+        public static IServiceCollection AddBankEaseServices(this IServiceCollection services)
         {
             // Register repositories
             services.AddSingleton<IAccountRepository, AccountRepository>();

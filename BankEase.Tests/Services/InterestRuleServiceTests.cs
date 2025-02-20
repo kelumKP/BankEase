@@ -4,7 +4,7 @@ using BankEase.Application.Services;
 using BankEase.Core.Entities;
 using BankEase.Infrastructure;
 
-namespace AwesomeGICBank.Tests.Services
+namespace BankEase.Tests.Services
 {
     public class InterestRuleServiceTests
     {

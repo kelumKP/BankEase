@@ -5,7 +5,9 @@ namespace BankEase.Infrastructure.Repositories
 {
     public class TransactionRepository : ITransactionRepository
     {
-        private const string ConnectionString = "Data Source=awesomegicbank.db";
+        private string ConnectionString => "Data Source=" + Path.Combine(
+            Directory.GetParent(Directory.GetCurrentDirectory()).Parent.Parent.Parent.FullName,
+            "BankEase.Infrastructure", "Data", "BankEaseDB.db");
 
         public TransactionRepository()
         {
