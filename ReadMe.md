@@ -1,6 +1,6 @@
-# BankEase Console Application
+# BankEase Application
 
-Welcome to the **BankEase Console Application**! This application is a simple banking system that allows users to manage transactions, define interest rules, and generate account statements. It is built using C# and leverages SQLite for data persistence.
+Welcome to the **BankEase Application**! This application is a simple banking system that allows users to manage transactions, define interest rules, and generate account statements. It is built using C# and leverages SQLite for data persistence.
 
 ## Features
 
