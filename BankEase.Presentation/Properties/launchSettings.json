@@ -1,0 +1,10 @@
+{
+  "profiles": {
+    "BankEase.Presentation": {
+      "commandName": "Project"
+    },
+    "Container (Dockerfile)": {
+      "commandName": "Docker"
+    }
+  }
+}
