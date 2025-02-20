@@ -1,6 +1,6 @@
-# BankEase Bank Console Application
+# BankEase Console Application
 
-Welcome to the **BankEase Bank Console Application**! This application is a simple banking system that allows users to manage transactions, define interest rules, and generate account statements. It is built using C# and leverages SQLite for data persistence.
+Welcome to the **BankEase Console Application**! This application is a simple banking system that allows users to manage transactions, define interest rules, and generate account statements. It is built using C# and leverages SQLite for data persistence.
 
 ## Features
 
@@ -65,21 +65,52 @@ Welcome to the **BankEase Bank Console Application**! This application is a simp
 
 ### Project Structure
 
-- **BankEase.ConsoleApp:** The main console application.
+- **BankEase.Presentation:** The main console application.
   - `Program.cs`: Entry point of the application.
 
 - **BankEase.Application:** Contains the core business logic and Application logic.
   - `Services`: Business services like `BankingService` , `InterestRuleService` and Application services like `BankingApplicationService`.
+  - `BankingApplicationService.cs` and `ServiceCollectionExtensions`
 
 - **BankEase.Core:** Contains the core entities.
   - `Entities`: Domain entities like `Account`, `Transaction`, and `InterestRule`.
 
 - **BankEase.Infrastructure:** Contains the data access layer.
-  - `Repositories`: Repository implementations for `Account`, `Transaction`, and `InterestRule`.
+  - `Repositories`: Repository implementations for base Initilization,`Account`, `Transaction`, and `InterestRule`.
   - `Interfaces`: Repository interfaces.
 
 - **BankEase.Tests:** Unit tests for the application.
   - `Services`: Tests for `BankingService` and `InterestRuleService`.
+
+
+## Components
+
+###  **BankingApplicationService**
+This is the main application service responsible for handling user interactions and coordinating the banking operations. It provides a console-based interface with the following options:
+   - **Input transactions**: Allow the user to input deposit or withdrawal transactions.
+   - **Define interest rules**: Let the user define or update interest rules for accounts.
+   - **Print statement**: Generate and display a statement showing the account's transactions and calculated interest.
+
+### **ServiceCollectionExtensions**
+This file contains an extension method for `IServiceCollection`, used to configure and register all the necessary services and repositories into the Dependency Injection (DI) container. These include:
+   - **Repositories**:
+     - `AccountRepository`: Handles data access related to account information.
+     - `TransactionRepository`: Manages transactions related to accounts.
+     - `InterestRuleRepository`: Stores and manages interest rules.
+   - **Application Services**:
+     - `BankingService`: Handles banking operations such as processing transactions and calculating balances.
+     - `InterestRuleService`: Manages the addition and retrieval of interest rules.
+   - **Top-Level Service**:
+     - `BankingApplicationService`: Provides the user interface and coordinates the banking operations.
+
+## Usage
+
+**BankingApplicationService** is the entry point for the application. It provides the main console interface where users can:
+   - Input transactions (deposit/withdrawal),
+   - Define or update interest rules,
+   - Print statements showing account transactions and calculated interest.
+   
+**ServiceCollectionExtensions** is used to register all the necessary services into the DI container. It ensures loose coupling between different parts of the application and makes it easier to manage dependencies.
 
 
 ### Testing
@@ -112,7 +143,7 @@ This project is licensed under the MIT License. See the LICENSE file for details
  - `Moq` for mocking in unit tests.
  - `NUnit` for unit testing.
 	
-Thank you for using AwesomeGIC Bank! We hope you find this application useful. If you have any questions or feedback, please feel free to reach out.
+Thank you for using BankEase! We hope you find this application useful. If you have any questions or feedback, please feel free to reach out.
 
 ---------------------------------------
 
