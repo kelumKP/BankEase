@@ -1,7 +1,4 @@
 ﻿using BankEase.Core.Entities;
-using BankEase.Infrastructure.Repositories.BankEase.Infrastructure.Repositories;
-using System;
-using System.Collections.Generic;
 
 namespace BankEase.Infrastructure.Repositories
 {

@@ -1,18 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using Microsoft.Data.Sqlite;
 
 namespace BankEase.Infrastructure.Repositories
 {
-    using Microsoft.Data.Sqlite;
-    using System;
-    using System.Collections.Generic;
-    using System.IO;
-
-    namespace BankEase.Infrastructure.Repositories
-    {
         public abstract class BaseRepository
         {
             private string ConnectionString => "Data Source=" + Path.Combine(
@@ -64,5 +53,5 @@ namespace BankEase.Infrastructure.Repositories
                 return results;
             }
         }
-    }
 }
+
